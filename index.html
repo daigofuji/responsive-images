@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Storytelling</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700|Ubuntu+Mono:400,700,400italic);
+      @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+      @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/* 
+colors:
+red: #9e0926;
+blue: #012340;
+gray: #8596a6;
+white: #f2f2f2;
+*/
+      body { 
+        color: #012340;
+        font-family: 'Yanone Kaffeesatz'; 
+        font-weight: 300;
+        line-height: 1.4;
+      }
+      .bold {
+       font-weight: 700;
+      }
+      .semi-bold {
+        font-weight: 400;
+      }
+      .light {
+        font-weight: 200;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 200;
+        margin: .2em 0;
+      }
+      p {
+        margin: .8em 0;
+      }
+      ul {
+        margin-bottom: .5em;
+        margin-top: .5em;
+      }
+      img, video {
+        max-width: 100%;
+        max-height: 31.250rem;
+      }
+      a, a:hover, a:visited {
+        color: #9e0926;;
+      }
+      .nihongo,
+      .jp {
+        font-family: 'Noto Sans Japanese', serif;
+      }
+      .inverse {
+        background: #9e0926 !important;
+        color: #f2f2f2;
+        text-shadow: 0 0 20px #333;
+      }
+
+      .white {
+        background: #fff !important;
+        color: #012340;
+        text-shadow: 0 0 5px #eee;
+      }
+      .black {
+        background: #272726 !important;
+        color: #fff;
+      }
+      .gray {
+        background: #e8e8e8 !important;
+      }      
+      .inverse h1, .inverse h2 {
+        color: #f2f2f2;
+        line-height: 0.8;
+      }
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono'; 
+      }
+      .remark-slide-content {
+        background: url(img/diagmonds-light.png) #8596a6;
+        font-size: 3rem;
+        padding: 1em 3em;
+      }
+      .remark-slide-content.big-img {
+        padding: 0 2em;
+      }
+      .remark-slide-content.full-img {
+        padding: 0;
+      }
+      .remark-slide-content.big-img p,
+      .remark-slide-content.full-img p {
+        margin: 0;
+      }
+      .remark-slide-content.big-img img,
+      .remark-slide-content.big-img video,
+      .remark-slide-content.full-img img,
+      .remark-slide-content.full-img video {
+        max-height: 62.500rem;
+      }
+      .remark-slide-content.smaller-text li{
+        font-size: 2.875rem;
+      }
+      .remark-slide-content h1 {
+        font-size: 8.250rem;
+        line-height: 1;
+      }
+      .remark-slide-content h2 {
+        font-size: 5.313rem;
+        line-height: 1;
+      }
+      .remark-slide-content h3 {
+        font-size: 4.063rem;
+        line-height: 1;
+      }
+      .remark-code {
+        font-size: 1.5rem;
+      }
+      .remark-slide-number {
+         font-size: 1.250rem;
+      }
+      .small {
+        font-size: 80%;
+        line-height: 1.2;
+      }
+      .img-200 {
+        width: 12.500rem;
+      }
+      .man {
+        margin: 0;
+      }
+      .credit {
+        font-size: 0.813rem;
+      }
+      .text-heavy {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# **Responsive Images** 
+
+.small[[CASCADE BOS meet up @Bocoup](http://www.meetup.com/cascadebos/events/225309830/) | August 10, 2015]
+
+by Daigo Fujiwara | [daigofuji.github.io/responsive-images](http://daigofuji.github.io/responsive-images/#1)
+
+
+---
+class: center, middle
+
+## Daigo Fujiwara
+Front-end Web Developer, Harvard Business Review
+
+---
+class: center, middle, big-img, white
+
+![tools](img/tools1.jpg)
+
+---
+class: center, middle, big-img, white
+
+![tools](img/tools2.jpg)
+
+---
+class: center, middle, big-img, white
+
+![tools](img/tools3.jpg)
+
+---
+class: center, middle, big-img, white
+
+![tools](img/tools4.png)
+
+---
+class: center, middle, inverse
+
+## Harvard Business Review
+
+---
+class: center, middle, white
+
+### First issue (1923)
+
+![img](img/hbr_vol1.png)
+
+---
+class: center, middle, white
+...and today<br>
+![img](img/hbr_2014.png)
+
+---
+class: center, middle
+
+# hbr.org redesign
+
+Responsive Web Site in November 2014
+
+---
+class: center, middle
+
+## Old site .small[(Originally designed May 2010)]
+
+
+
+---
+class: center, middle, big-img, gray
+
+![img](img/old-site.png)
+
+---
+class: center, middle
+
+## Redesign was launched on November 10, 2014
+
+---
+class: center, middle, big-img, gray
+
+![img](img/am-i-responsive.png)
+
+---
+class: middle, center
+
+## **Technology** has changed
+
+
+---
+class: center, middle, big-img, white 
+
+![img](img/devices.jpg)
+
+.credit[https://www.flickr.com/photos/zeldman/9609702980/]
+
+---
+class: center, middle, big-img, white 
+
+![img](img/apple-old-imac-vs-iphone-540x540.jpg)
+
+
+---
+class: middle, center
+
+## **Reader habits** have changed 
+
+Just look around while on the subway...
+---
+class: center, middle, big-img, white  
+
+![img](img/paper.jpg)
+
+---
+class: center, middle, big-img, white  
+
+![img](img/habits1.png)
+
+---
+class: center, middle, big-img, white  
+
+![img](img/habits2.png)
+
+---
+class: middle, center, big-img, white
+
+<!-- HBR traffic: June 2013
+Desktop **71%** Mobile **21%** Tablet **8%**
+June 2014
+Desktop **61%** Mobile **30%** Tablet **9%**
+June 2015
+Desktop **56%** Mobile **37%** Tablet **7%** -->
+![img](img/mobile.png)
+
+
+.credit[Source: HBR.org front end team analysis of Google Analytics]
+---
+class: center, middle, big-img, white 
+
+![img](img/consumption.png)
+
+---
+class: middle, center
+
+## Our audience
+More people have access to our content
+
+---
+class: center, middle, big-img, white  
+
+![img](img/executives.png)
+
+
+---
+class: middle, center
+
+# Shifting to a<br>**device-agnostic**<br>website
+The new hbr.org works regardless of users' screen sizes
+
+---
+class: center, middle, big-img, white 
+[![img](img/homepage.png)](video/video1.html)
+
+---
+class: center, middle, big-img, white
+[![img](img/my-library.png)](https://hbr.org/my-library)
+
+---
+class: center, middle
+
+## Premium Mobile Experience?
+
+---
+class: middle
+
+* Easy to navigate 
+* Easy to share
+* Clear, Simple, Beautiful, Useful
+* Fast loading (Web Optimization)
+* Engaging interactives
+
+---
+class: middle
+
+## Metrics: 
+* Increase in sharing
+* Increase in repeat visits
+* increase in page views
+* increase in mobile sessions
+
+---
+class: center, middle, inverse
+
+# Responsive Web Design
+
+---
+class: center, middle
+
+## Not a new idea
+
+---
+class: center, middle, big-img, white 
+
+![img](img/rwd.png)
+
+---
+class: center, middle
+
+# It’s Easy... 
+```css
+@media (min-width:500px) { ... }
+```
+
+---
+class: center, middle
+
+# ...or _is it?_
+
+Not just code, but an approach
+
+
+class: middle, center
+
+**Thank you!**
+
+# **Let’s tell great stories**
+
+daigo@daigofujiwara.com
+
+[<i class="fa fa-github"></i> github @daigofuji](https://github.com/daigofuji) [<i class="fa fa-twitter"></i> twitter @daigofuji](https://twitter.com/DaigoFuji)
+
+![img](img/hbr_logo.svg)
+
+    </textarea>
+    <script src="js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({ ratio: "16:9" });
+    </script>
+  </body>
+</html>
