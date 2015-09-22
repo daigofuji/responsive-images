@@ -206,8 +206,8 @@ class: center, middle
 #Premium<br>=<br>**High Resolution**
 
 ---
-class: center, middle, big-img, white 
-[Magazine page] 
+class: center, middle, big-img, gray 
+![Example of article page](img/magazine.jpg)
 
 
 ---
@@ -356,8 +356,6 @@ class: middle
 ```html
 <img srcset="" src="" alt="">
 ```
-
-
 An `img` element represents an image.
 
 The image referenced by the `src` and `srcset` attributes is the content to be embedded.
@@ -394,6 +392,15 @@ or
 http://bit.ly/1Kxiflb
 
 ---
+class: center, middle
+
+`2x` in srcset is a **descriptor**. Each image candidate string inside `srcset` must have at least one of the descriptors. 
+
+You can also use w-descriptor like `200w` (Meaning 200 pixel in the browser)
+
+(You can omit 1x in the example, too.)
+
+---
 class: center, middle, inverse
 
 # srcset and sizes
@@ -407,21 +414,42 @@ class: middle
 
 The `sizes` attribute can be used to specify additional context about the intended embed/render size of the image relative to the viewport width.
 
-Web Hypertext Application Technology Working Group’s (WHATWG) [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
+> Web Hypertext Application Technology Working Group’s (WHATWG) [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
 
 ---
+class: center, middle, gray
 
+Great read: [Srcset and sizes](https://ericportis.com/posts/2014/srcset-sizes/) by Eric Portis
 
+![img](img/ericportis.png)
+
+---
+class: center, middle, gray
+
+![img](img/srcset-sizes.png)
+
+.small[from [Srcset and sizes](https://ericportis.com/posts/2014/srcset-sizes/) by Eric Portis]
+
+---
+class: center, middle, inverse
+
+Example **HBR Article Page**
+
+Image is 100% of the viewport width (100vw) up to XXpx (Media query breakpoint). then it is 83% of the page (10 out of 12 column)
+
+```
+<img srcset="" sizes="" src="" alt="">
+
+```
 
 
 ---
-
 class: center, middle, inverse
 
 # Picture
 
 ---
-class: center, middle
+class:  middle
 
 ```html
 <picture>
@@ -435,9 +463,9 @@ class: center, middle
 ---
 class: middle
 
-If the parent is a picture element, then any previous sibling source element’s `srcset` attributes may also determine the embedded content.
+If the parent is a `picture` element, then any previous sibling source element’s `srcset` attributes may also determine the embedded content.
 
-Web Hypertext Application Technology Working Group’s (WHATWG) [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
+> Web Hypertext Application Technology Working Group’s (WHATWG) [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
 
 
 
@@ -448,23 +476,49 @@ class: center, middle, white
 
 
 
-
 ---
 class: center, middle
 
-Falback 
+## Fallback 
 
 Browsers that do not support/understand `srcset` will just continue to use the `src` element, and those browsers that do support `srcset` can use its value instead.
 
 
 
 ---
-class: center, middle
+class: center, middle, white
 
-Picturefill Polyfill 
+[Picturefill Polyfill](https://scottjehl.github.io/picturefill/) by Scott Jehl 
 
 ![img](img/picturefill.png)
 
+
+---
+class: center, middle
+
+Last but not least...
+## What about images?
+
+---
+class: center, middle, inverse
+
+# Tools for **automation**
+
+---
+class: center, middle, white
+
+[RICG Responsive images plugin](https://wordpress.org/plugins/ricg-responsive-images/) for WordPress by Tim Evko et al
+
+![img](img/plugin.png)
+
+---
+class: center, middle, white
+
+[Grunt Responsive Images](http://www.andismith.com/grunt-responsive-images/) by Andi Smith
+
+![img](img/grunt-resp-img.png)
+
+[How to by Addy Osmani](http://addyosmani.com/blog/generate-multi-resolution-images-for-srcset-with-grunt/)
 
 ---
 class: middle, center
