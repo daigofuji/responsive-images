@@ -385,6 +385,7 @@ class: middle
 - [bit.ly/1FrQYU9](http://bit.ly/1FrQYU9)
 - [view source on github](https://github.com/daigofuji/responsive-images/blob/gh-pages/examples/srcset.html)
 
+What to expect:
 - If your browser does not support srcset, you will see gray (default) 100x100
 - If srcset is supported but is not retina, red 100x100
 - If srcset is supported and is retina, blue 200x200
@@ -394,10 +395,11 @@ class: center, middle
 
 `2x` in srcset is a **descriptor**. Each image candidate string inside `srcset` must have at least one of the descriptors. 
 
-You can also use w-descriptor like `200w` (Meaning 200 pixel in the browser)
+You can also use w-descriptor like `200w` ("this image is 200 pixel wide")
 
 You can omit 1x in the example, too. Like:
-```
+
+```html
 <img 
   srcset="http://placehold.it/200x200/0000ff 2x"
   src="http://placehold.it/100x100" 
@@ -408,17 +410,17 @@ You can omit 1x in the example, too. Like:
 class: center, middle, inverse
 
 # srcset and sizes
+
 ```html
 <img srcset="" sizes="" src="" alt="">
 ```
-
 
 ---
 class: middle
 
 The `sizes` attribute can be used to specify additional context about the intended embed/render size of the image relative to the viewport width.
 
-> Web Hypertext Application Technology Working Group’s (WHATWG) [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
+> WHATWG's [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
 
 ---
 class: center, middle, gray
@@ -439,7 +441,9 @@ class: center, middle
 
 ### Example **HBR Article Page**
 
-Image is 100% of the viewport width (100vw) up to 1024px (Media query breakpoint). then it is 83% of the page (10 out of 12 column)
+Image is 100% of the viewport width (100vw) up to 1024px (Media query breakpoint).
+
+Then it is 83% of the viewport width (10 out of 12 column)
 
 ```
 <img srcset="" sizes="(min-width: 1024px) 84vw, 100vw" src="" alt="">
@@ -456,7 +460,7 @@ Demo
 ---
 class: center, middle, inverse
 
-# Picture
+# Picture tag
 
 ---
 class:  middle
@@ -474,15 +478,19 @@ class: middle
 
 If the parent is a `picture` element, then any previous sibling source element’s `srcset` attributes may also determine the embedded content.
 
-> Web Hypertext Application Technology Working Group’s (WHATWG) [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
-
-
+> WHATWG's [Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html)
 
 ---
 class: center, middle, white 
 
 ![img](img/picture-caniuse.png)
 
+
+---
+class: center, middle
+
+### Use `picture` _only_ if you're doing art direction — otherwise, `srcset/sizes` are the way to go.
+> -- Wilto
 
 
 ---
@@ -497,7 +505,7 @@ Browsers that do not support/understand `srcset` will just continue to use the `
 ---
 class: center, middle, white
 
-[Picturefill Polyfill](https://scottjehl.github.io/picturefill/) by Scott Jehl 
+[**Picturefill** Polyfill](https://scottjehl.github.io/picturefill/) by Scott Jehl 
 
 ![img](img/picturefill.png)
 
