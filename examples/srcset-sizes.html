@@ -4,16 +4,32 @@
 	<meta charset="UTF-8">
 	<title>Srcset and Sizes demo</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<style>
+		body { background: #fff; }
+		img { max-width: 100%; } 
+		.wrap {
+			width: 100%;
+			float: right;
+		}
+		@media (min-width: 1024px) {
+			.wrap {
+				width: 83.333333%;
+			}
+		}
+	</style>
 </head>
 <body>
 	
-	 <img src="http://placehold.it/320x180"
- 	sizes="100vw"
- 	srcset="http://placehold.it/320x180 320w,
- 	http://placehold.it/640x360 640w,
-	http://placehold.it/1024x576 1024w,
- 	http://placehold.it/1920x1080 1920w" 
- 	alt="You should have alt">
- 	
+	<div class="wrap">
+		 <img 
+		 	sizes="(min-width: 1024px) 84vw, 100vw"
+		 	srcset="http://placehold.it/320x180/ddffff 320w,
+		 	http://placehold.it/640x360/aaffff 640w,
+			http://placehold.it/1024x576/88ffff 1024w,
+		 	http://placehold.it/1920x1080/55ffff 1920w"
+		 	src="http://placehold.it/320x180"
+		 	alt="alt text">
+	</div>
+
 </body>
 </html>

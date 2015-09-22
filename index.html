@@ -293,7 +293,7 @@ RICG (Responsive Issues Community Group) and Mat "Wilto" Marquis to the rescue.
 ---
 class: middle
 
-Examples
+### Examples
 - media query
 - `srcset` attribute
 - `srcset` and `sizes` attributes
@@ -315,16 +315,14 @@ class: center, middle, white
 
 
 ---
-class: center, middle
+class: middle
 
 ### Demo 
 
-http://daigofuji.github.io/responsive-images/examples/mediaquery.html
-
-or
-
-http://bit.ly/1Kxiflb
-
+- [examples/mediaquery.html](http://daigofuji.github.io/responsive-images/examples/mediaquery.html)
+- [bit.ly/1Kxiflb](http://bit.ly/1Kxiflb)
+- [Test using ish](http://bradfrost.com/demo/ish/?url=http%3A%2F%2Fdaigofuji.github.io%2Fresponsive-images%2Fexamples%2Fmediaquery.html)
+- [view source on github](https://github.com/daigofuji/responsive-images/blob/gh-pages/examples/mediaquery.html)
 
 ---
 class: center, middle, inverse
@@ -375,21 +373,21 @@ Example **Retina Display image swap**
   width="100" height="100" alt="alt text">
 ```
 
-- If your browser does not support srcset, show gray 100x100
+- If your browser does not support srcset, you will see gray (default) 100x100
 - If srcset is supported but is not retina, red 100x100
 - If srcset is supported and is retina, blue 200x200
 
 ---
-class: center, middle
+class: middle
 
 ### Demo 
+- [examples/srcset.html](http://daigofuji.github.io/responsive-images/examples/srcset.html)
+- [bit.ly/1FrQYU9](http://bit.ly/1FrQYU9)
+- [view source on github](https://github.com/daigofuji/responsive-images/blob/gh-pages/examples/srcset.html)
 
-
-http://daigofuji.github.io/responsive-images/examples/mediaquery.html
-
-or
-
-http://bit.ly/1Kxiflb
+- If your browser does not support srcset, you will see gray (default) 100x100
+- If srcset is supported but is not retina, red 100x100
+- If srcset is supported and is retina, blue 200x200
 
 ---
 class: center, middle
@@ -398,7 +396,13 @@ class: center, middle
 
 You can also use w-descriptor like `200w` (Meaning 200 pixel in the browser)
 
-(You can omit 1x in the example, too.)
+You can omit 1x in the example, too. Like:
+```
+<img 
+  srcset="http://placehold.it/200x200/0000ff 2x"
+  src="http://placehold.it/100x100" 
+  width="100" height="100" alt="alt text">
+```
 
 ---
 class: center, middle, inverse
@@ -431,17 +435,23 @@ class: center, middle, gray
 .small[from [Srcset and sizes](https://ericportis.com/posts/2014/srcset-sizes/) by Eric Portis]
 
 ---
-class: center, middle, inverse
+class: center, middle
 
-Example **HBR Article Page**
+### Example **HBR Article Page**
 
-Image is 100% of the viewport width (100vw) up to XXpx (Media query breakpoint). then it is 83% of the page (10 out of 12 column)
-
-```
-<img srcset="" sizes="" src="" alt="">
+Image is 100% of the viewport width (100vw) up to 1024px (Media query breakpoint). then it is 83% of the page (10 out of 12 column)
 
 ```
+<img srcset="" sizes="(min-width: 1024px) 84vw, 100vw" src="" alt="">
 
+```
+---
+
+Demo
+- [examples/srcset-sizes.html](http://daigofuji.github.io/responsive-images/examples/srcset-sizes.html)
+- [bit.ly/1PoYgbJ](http://bit.ly/1PoYgbJ)
+- [Test using ish](http://bradfrost.com/demo/ish/?url=http%3A%2F%2Fdaigofuji.github.io%2Fresponsive-images%2Fexamples%2Fsrcset-sizes.html)
+- [view source on github](https://github.com/daigofuji/responsive-images/blob/gh-pages/examples/srcset-sizes.html)
 
 ---
 class: center, middle, inverse
@@ -453,7 +463,6 @@ class:  middle
 
 ```html
 <picture>
-  <source type="" srcset="">
   <source media="" srcset="">
   <source srcset="">
   <img src="">
@@ -514,11 +523,27 @@ class: center, middle, white
 ---
 class: center, middle, white
 
+Sizes of images created using Responsive Images plugin
+
+.small[(Advanced Compression Option turned off)]
+
+![img](img/plugin-cuts.png)
+
+---
+class: center, middle, white
+
 [Grunt Responsive Images](http://www.andismith.com/grunt-responsive-images/) by Andi Smith
 
 ![img](img/grunt-resp-img.png)
 
-[How to by Addy Osmani](http://addyosmani.com/blog/generate-multi-resolution-images-for-srcset-with-grunt/)
+---
+class: center, middle, white
+
+Sizes of images created using Grunt Responsive Images
+
+![img](img/grunt-cuts.png)
+
+This [how to by Addy Osmani](http://addyosmani.com/blog/generate-multi-resolution-images-for-srcset-with-grunt/) was helpful
 
 ---
 class: middle, center
