@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Media Query Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<style>
+		.box {
+			width: 100%;
+			padding-top: 56.25%; /* 16:9 */
+			background-image: none;
+			background-position: 0% 0%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-image: url('http://placehold.it/320x180');
+		}
+		@media (min-width: 410px) {
+		  .box { background-image: url('http://placehold.it/640x360'); }
+		}
+		@media (min-width: 800px) {
+		  .box { background-image: url('http://placehold.it/1024x576'); }
+		}
+		@media (min-width: 1000px) {
+		  .box { background-image: url('http://placehold.it/1920x1080'); }
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
